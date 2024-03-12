@@ -4,14 +4,15 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-app = Flask(__name__)
+application = Flask(__name__)
+app=application
 #import ridge regressor model and standard scaler pickle
 ridge_model=pickle.load(open('models/ridge.pkl','rb'))
 standard_scaler=pickle.load(open('models/scaler.pkl','rb'))
 
 
 
-app.route('/predicdata',methods=['GET','POST'])
+@app.route('/predicdata',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='POST':
         Temperature=float(request.form.get('Temperature'))
