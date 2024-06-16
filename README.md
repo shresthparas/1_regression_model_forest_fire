@@ -5,12 +5,13 @@
 
 To run flask application 
 
+step1: pip install -r requirements.txt
+
+step2: pyhton application.py
+
 ```
-python app.py
+
 ```
 
 
-To access your flask application open new tab in and paste the url:
-```
-https://{your_url}.pwskills.app:5000/
 ```
